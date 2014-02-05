@@ -1,0 +1,17 @@
+{
+  "name": "utm-params",
+  "repo": "segmentio/utm-params",
+  "version": "0.0.1",
+  "description": "parse and get all utm parameters",
+  "main": "index.js",
+  "scripts": ["index.js"],
+  "version": "0.0.1",
+  "dependencies": {
+    "component/querystring": "1.2.0"
+  },
+  "development": {
+    "visionmedia/mocha": "*",
+    "component/assert": "*",
+    "yields/gravy": "*"
+  }
+}
