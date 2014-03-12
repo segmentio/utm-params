@@ -21,11 +21,14 @@ module.exports = utm;
 
 function utm(query){
   var params = parse(query);
+  var param;
   var ret = {};
 
   for (var key in params) {
     if (~key.indexOf('utm_')) {
-      ret[key.substr(4)] = params[key];
+      param = key.substr(4);
+      if ('campaign' == param) param = 'name';
+      ret[param] = params[key];
     }
   }
 
