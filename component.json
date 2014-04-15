@@ -6,7 +6,7 @@
   "main": "index.js",
   "scripts": ["index.js"],
   "dependencies": {
-    "component/querystring": "1.2.0"
+    "component/querystring": "*"
   },
   "development": {
     "visionmedia/mocha": "*",
