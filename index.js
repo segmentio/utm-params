@@ -20,6 +20,8 @@ module.exports = utm;
  */
 
 function utm(query){
+  if ('?' == query.charAt(0)) query = query.substring(1);
+  var query = query.replace(/\?/g, '&');
   var params = parse(query);
   var param;
   var ret = {};
