@@ -23,7 +23,7 @@ utm('?utm_source=google&utm_medium=medium&utm_term=keyword&utm_content=some%20co
   "medium": "medium",
   "term": "keyword",
   "content": "some content",
-  "campaign": "some campaign"
+  "name": "some campaign"
 }
 ```
 
