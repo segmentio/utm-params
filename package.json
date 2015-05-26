@@ -1,0 +1,34 @@
+{
+  "name": "utm-params",
+  "version": "1.0.2",
+  "description": "Parse a URL, returning all UTM parameters.",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "make test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/segmentio/utm-params.git"
+  },
+  "keywords": [
+    "utm",
+    "querystring",
+    "browser"
+  ],
+  "author": "Segment <friends@segment.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/segmentio/utm-params/issues"
+  },
+  "homepage": "https://github.com/segmentio/utm-params#readme",
+  "devDependencies": {
+    "duo": "^0.11.4",
+    "duo-test": "^0.4.0",
+    "eslint": "^0.21.2",
+    "eslint-config-segment": "^1.0.9",
+    "phantomjs": "^1.9.17"
+  }
+}

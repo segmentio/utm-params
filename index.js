@@ -1,3 +1,4 @@
+'use strict';
 
 /**
  * Module dependencies.
@@ -6,10 +7,10 @@
 var parse = require('querystring').parse;
 
 /**
- * Expose `utm`
+ * hasOwnProperty reference.
  */
 
-module.exports = utm;
+var has = Object.prototype.hasOwnProperty;
 
 /**
  * Get all utm params from the given `querystring`
@@ -20,19 +21,32 @@ module.exports = utm;
  */
 
 function utm(query){
-  if ('?' == query.charAt(0)) query = query.substring(1);
-  var query = query.replace(/\?/g, '&');
-  var params = parse(query);
+  // Remove leading ? if present
+  if (query.charAt(0) === '?') {
+    query = query.substring(1);
+  }
+
+  query = query.replace(/\?/g, '&');
+
   var param;
-  var ret = {};
+  var params = parse(query);
+  var results = {};
 
   for (var key in params) {
-    if (~key.indexOf('utm_')) {
-      param = key.substr(4);
-      if ('campaign' == param) param = 'name';
-      ret[param] = params[key];
+    if (has.call(params, key)) {
+      if (key.substr(0, 4) === 'utm_') {
+        param = key.substr(4);
+        if (param === 'campaign') param = 'name';
+        results[param] = params[key];
+      }
     }
   }
 
-  return ret;
+  return results;
 }
+
+/**
+ * Exports.
+ */
+
+module.exports = utm;

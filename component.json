@@ -2,15 +2,16 @@
   "name": "utm-params",
   "repo": "segmentio/utm-params",
   "version": "1.0.2",
-  "description": "parse and get all utm parameters",
+  "description": "Parse a URL, returning all UTM parameters.",
   "main": "index.js",
-  "scripts": ["index.js"],
+  "scripts": [
+    "index.js"
+  ],
   "dependencies": {
     "component/querystring": "*"
   },
   "development": {
-    "visionmedia/mocha": "*",
     "component/assert": "*",
-    "yields/gravy": "*"
+    "visionmedia/mocha": "*"
   }
 }
