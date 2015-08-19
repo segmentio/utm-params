@@ -27,7 +27,7 @@ function utm(query){
   var ret = {};
 
   for (var key in params) {
-    if (~key.indexOf('utm_')) {
+    if (0 === key.indexOf('utm_')) {
       param = key.substr(4);
       if ('campaign' == param) param = 'name';
       ret[param] = params[key];

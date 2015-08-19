@@ -2,3 +2,4 @@ node_modules/
 components/
 build/
 build.js
+.DS_Store
