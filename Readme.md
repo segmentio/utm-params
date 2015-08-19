@@ -1,17 +1,16 @@
+# utm-params [![CI][ci-badge]][ci-link]
 
-# utm-params
-
-  parse and get all utm parameters.
+Parse a URL, returning all UTM parameters.
 
 ## Installation
 
-```bash
+```sh
 $ component install segmentio/utm-params
 ```
 
 ## API
 
-### utm(querystring)
+### utm(querystring : string)
 
 ```js
 utm('?utm_source=google&utm_medium=medium&utm_term=keyword&utm_content=some%20content&utm_campaign=some%20campaign');
@@ -29,5 +28,8 @@ utm('?utm_source=google&utm_medium=medium&utm_term=keyword&utm_content=some%20co
 
 ## License
 
-  (MIT)
+(MIT)
 
+
+[ci-badge]: https://circleci.com/gh/segmentio/utm-params.svg?style=svg
+[ci-link]: https://circleci.com/gh/segmentio/utm-params

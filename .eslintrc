@@ -1,0 +1,9 @@
+{
+  "extends": "segment/browser",
+
+  "globals": {
+    "exports": true,
+    "module": true,
+    "require": true
+  }
+}
