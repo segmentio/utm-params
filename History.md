@@ -1,4 +1,11 @@
 
+1.0.3 / 2015-08-19
+==================
+
+  * refactor and add CI
+  * ignore utm params that do not start with `utm`
+  * reflect campaign->name conversion in readme
+
 1.0.2 / 2014-11-11
 ==================
 
