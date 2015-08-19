@@ -1,6 +1,6 @@
 
 build:
-	@duo test/test.js > build.js
+	@duo test/test.js --stdout > build.js
 
 test: build
 	@duo-test browser -c make
