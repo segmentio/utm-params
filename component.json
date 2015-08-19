@@ -8,7 +8,9 @@
     "index.js"
   ],
   "dependencies": {
-    "component/querystring": "*"
+    "component/querystring": "2.0.0",
+    "ndhoule/includes": "^1.0.0",
+    "ndhoule/foldl": "^1.0.3"
   },
   "development": {
     "component/assert": "*",
