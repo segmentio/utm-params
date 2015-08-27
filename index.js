@@ -4,6 +4,8 @@
  * Module dependencies.
  */
 
+var includes; try { includes = require('@ndhoule/includes'); } catch(e) { includes = require('ndhoule/includes'); }
+var foldl; try { foldl = require('@ndhoule/foldl'); } catch(e) { foldl = require('ndhoule/foldl'); }
 var parse = require('querystring').parse;
 
 /**
@@ -20,7 +22,7 @@ var has = Object.prototype.hasOwnProperty;
  * @api private
  */
 
-function utm(query){
+function utm(query) {
   // Remove leading ? if present
   if (query.charAt(0) === '?') {
     query = query.substring(1);
@@ -45,8 +47,32 @@ function utm(query){
   return results;
 }
 
+var allowedKeys = {
+  name: true,
+  term: true,
+  source: true,
+  medium: true,
+  content: true
+};
+
+/**
+ * Get strict utm params - from the given `querystring`
+ *
+ * @param {String} query
+ * @return {Object}
+ * @api private
+ */
+
+function strict(query) {
+  return foldl(function(acc, val, key) {
+    if (has.call(allowedKeys, key)) acc[key] = val;
+    return acc;
+  }, {}, utm(query));
+}
+
 /**
  * Exports.
  */
 
 module.exports = utm;
+module.exports.strict = strict;

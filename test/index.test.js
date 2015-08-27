@@ -13,14 +13,16 @@ var utm = require('../index');
 
 describe('utm-params', function() {
   it('should parse utm params', function() {
-    var params = utm('?utm_source=source&utm_medium=medium&utm_term=term&utm_content=content&utm_campaign=name');
+    var params = utm('?utm_source=source&utm_medium=medium&utm_term=term&utm_content=content&utm_campaign=name&utm_test=test&utm_fake=fake');
 
     assert.deepEqual(params, {
       content: 'content',
       medium: 'medium',
       name: 'name',
       source: 'source',
-      term: 'term'
+      term: 'term',
+      fake: 'fake',
+      test: 'test'
     });
   });
 
@@ -42,3 +44,16 @@ describe('utm-params', function() {
     assert.deepEqual(params, { name: 'foo', source: 'baz' });
   });
 });
+
+describe('utm-params.strict', function() {
+    it('should omit unspecced utm params', function() {
+      var params = utm.strict('?utm_source=source&utm_medium=medium&utm_term=term&utm_content=content&utm_campaign=name&utm_test=test&utm_fake=fake');
+      assert.deepEqual(params, {
+        content: 'content',
+        medium: 'medium',
+        name: 'name',
+        source: 'source',
+        term: 'term'
+      });
+    });
+  });
