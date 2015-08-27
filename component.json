@@ -1,7 +1,7 @@
 {
   "name": "utm-params",
   "repo": "segmentio/utm-params",
-  "version": "1.0.3",
+  "version": "1.1.0",
   "description": "Parse a URL, returning all UTM parameters.",
   "main": "index.js",
   "scripts": [
