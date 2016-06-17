@@ -1,9 +1,3 @@
 {
-  "extends": "segment/browser",
-
-  "globals": {
-    "exports": true,
-    "module": true,
-    "require": true
-  }
+  "extends": "@segment/eslint-config/browser/legacy"
 }

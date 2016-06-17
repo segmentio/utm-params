@@ -1,11 +1,7 @@
 'use strict';
 
-/**
- * Module dependencies.
- */
-
-var assert = require('component/assert');
-var utm = require('../index');
+var assert = require('proclaim');
+var utm = require('../lib');
 
 /**
  * Tests.
@@ -46,14 +42,14 @@ describe('utm-params', function() {
 });
 
 describe('utm-params.strict', function() {
-    it('should omit unspecced utm params', function() {
-      var params = utm.strict('?utm_source=source&utm_medium=medium&utm_term=term&utm_content=content&utm_campaign=name&utm_test=test&utm_fake=fake');
-      assert.deepEqual(params, {
-        content: 'content',
-        medium: 'medium',
-        name: 'name',
-        source: 'source',
-        term: 'term'
-      });
+  it('should omit unspecced utm params', function() {
+    var params = utm.strict('?utm_source=source&utm_medium=medium&utm_term=term&utm_content=content&utm_campaign=name&utm_test=test&utm_fake=fake');
+    assert.deepEqual(params, {
+      content: 'content',
+      medium: 'medium',
+      name: 'name',
+      source: 'source',
+      term: 'term'
     });
   });
+});

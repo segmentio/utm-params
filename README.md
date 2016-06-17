@@ -1,11 +1,14 @@
-# utm-params [![CI][ci-badge]][ci-link]
+# utm-params
+
+[![CircleCI](https://circleci.com/gh/segmentio/utm-params.svg?style=shield&circle-token=d49fc6469182ce8392a332106af7a5fb76b2f8b7)](https://circleci.com/gh/segmentio/utm-params)
+[![Codecov](https://img.shields.io/codecov/c/github/segmentio/utm-params/master.svg?maxAge=2592000)](https://codecov.io/gh/segmentio/utm-params)
 
 Parse a URL, returning all UTM parameters.
 
 ## Installation
 
 ```sh
-$ component install segmentio/utm-params
+$ npm install @segment/utm-params
 ```
 
 ## API
@@ -44,11 +47,3 @@ utm.strict('?utm_source=google&utm_medium=medium&utm_term=keyword&utm_content=so
   "name": "some campaign"
 }
 ```
-
-## License
-
-(MIT)
-
-
-[ci-badge]: https://circleci.com/gh/segmentio/utm-params.svg?style=svg
-[ci-link]: https://circleci.com/gh/segmentio/utm-params
